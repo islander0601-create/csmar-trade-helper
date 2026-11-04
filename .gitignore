@@ -23,3 +23,6 @@ desktop.ini
 .env.*
 *.pem
 *.key
+
+# WorkBuddy 本地项目数据
+.workbuddy/
