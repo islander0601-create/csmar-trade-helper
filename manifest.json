@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "CSMAR 期货交易助手",
+  "version": "1.6.0",
+  "description": "希施玛仿真交易平台辅助：一键下单/反手、止损止盈、移动止损、按金额算手数、持仓看板、3分钟布林带（无全局快捷键）。",
+  "minimum_chrome_version": "111",
+  "permissions": ["activeTab"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "CSMAR 期货交易助手",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://vetp.csmar.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "world": "MAIN",
+      "all_frames": false
+    }
+  ]
+}

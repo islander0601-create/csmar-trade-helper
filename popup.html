@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:308px;background:#161c2b;color:#dfe6f5;
+       font:12px/1.6 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;padding:12px}
+  .hd{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+  .hd img{width:34px;height:34px;border-radius:8px}
+  .hd b{display:block;font-size:13px;color:#fff;font-weight:600}
+  .hd span{font-size:10px;color:#5d6b8a}
+  .st{padding:7px 9px;border-radius:6px;font-size:11px;margin-bottom:10px;
+      background:#232c42;color:#9fb0d0;border-left:3px solid #3d7eff}
+  .st.ok{background:#12301f;color:#5fd39b;border-left-color:#22a06b}
+  .st.no{background:#301a18;color:#e0867f;border-left-color:#cf382f}
+  table{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:9px}
+  td{padding:3px 0;color:#9fb0d0;border-bottom:1px solid #1e2740}
+  td:first-child{color:#dfe6f5;width:78px}
+  kbd{display:inline-block;min-width:17px;text-align:center;background:#0f1421;border:1px solid #2b3550;
+      border-bottom-width:2px;border-radius:4px;padding:0 4px;font:11px/16px inherit;color:#c3cfe6}
+  .tip{font-size:10px;color:#5d6b8a;line-height:1.7;border-top:1px dashed #2b3550;padding-top:8px}
+  .tip b{color:#9fb0d0;font-weight:500}
+</style>
+</head>
+<body>
+  <div class="hd">
+    <img src="icons/icon48.png" alt="">
+    <div><b>CSMAR 期货交易助手</b><span id="ver"></span></div>
+  </div>
+
+  <div id="status" class="st">检测当前页面…</div>
+
+  <div class="tip" style="border-top:none;padding-top:0;margin-bottom:8px">
+    <b>快捷键已移除</b>（v1.4.0）。<br>
+    之前全局监听键盘数字键会导致误下单，现在所有下单只能通过面板按钮触发。
+  </div>
+
+  <div class="tip">
+    面板分三个页签：<b>下单</b>一键盘、<b>风控</b>止损止盈与按金额算手数、<b>持仓</b>实时持仓与资金。<br>
+    交易账号、偏移、手数、布林窗口等设置，都在<b>下单页签</b>的「设置 ⚙」里。<br>
+    首次使用请先在「商品期货 → 交易下单」页停留一下，让脚本识别账号。
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
